@@ -1,11 +1,14 @@
 import React from "react";
 import "./App.css";
-import Header from './Components/Header/Header';
+import Navbar from './Components/Navbar/Navbar';
+import ItemListContainer from "./Components/Main/ItemListContainer";
 
 const App = () => {
+  const saludo = `Encontrá tu funko acá. Somos el importador más grande de FunkoPops de Argentina.`
   return (
     <>
-    <Header />
+      <Navbar />
+      <ItemListContainer greeting={saludo} />
     </>
   )
 }
