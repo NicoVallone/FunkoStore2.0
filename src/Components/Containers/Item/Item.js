@@ -1,8 +1,9 @@
 import React  from 'react';
 import {styles} from "./Item.Style"
 import "./Item.Style"
-import deadpool from "../../Assets/Deadpool.jpg"
-import ItemCount from "./ItemCount"
+import deadpool from "../../../Assets/Deadpool.jpg"
+import ItemCount from "../ItemCount/ItemCount"
+import {Link} from "react-router-dom"
 
 
 const onAdd=(contador)=> {
@@ -16,8 +17,7 @@ const Item = ({datos}) => {
         <div style={styles.info}>
             <h3>{datos.nombre}</h3>
             <span> {datos.subcategoria} </span>
-            <span> {datos.categoria} </span>
-            <span>${datos.precio}</span>     
+            <Link to={"/producto/" + datos.id} >Ver más...</Link>
             <ItemCount stock={datos.stock} initial={1} onAdd={onAdd} />
         </div>
      </div>

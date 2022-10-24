@@ -1,5 +1,5 @@
 import React from "react";
-import Item from "./Item";
+import Item from "../Item/Item";
 import {styles} from "./ItemList.Style"
 
 
@@ -9,7 +9,7 @@ const ItemList = ({listado}) => {
     <div style={styles.listado}>
         {
             listado.map((funko)=>{
-            return <Item datos={funko} />
+            return <Item key={funko.id} datos={funko} />
             })
         }
     </div>
